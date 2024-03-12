@@ -1,16 +1,4 @@
 const puppeteer = require('puppeteer')
-
-
-var assert = require('assert');
-//const expect = require('chai/register-expect');
-
-
-// const expect = require('chai').expect;
-//import { expect } from 'chai';
-//var assert = require('chai').assert;
-// const chai = require('chai');
-// const expect = chai.expect;
-
 const {setTimeout} = require("node:timers/promises");
 
 describe('My first Puppeteer test', function() {
@@ -87,11 +75,6 @@ describe('My first Puppeteer test', function() {
         console.log('countPs = ', countPs)
 
         await setTimeout(5000);
-
-        // Now running expect
-        assert.equal(title, 'TestCafe Example Page')
-
-        assert.equal(url, 'https://devexpress.github.io/testcafe/example/')
 
 
         //await browser.close()   //

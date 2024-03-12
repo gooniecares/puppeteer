@@ -20,7 +20,8 @@
   "dependencies": {
     "chai": "^5.1.0",
     "mocha": "^10.3.0",
-    "puppeteer": "^22.4.1"
+    "puppeteer": "^22.4.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
