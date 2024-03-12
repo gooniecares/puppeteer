@@ -1,0 +1,25 @@
+{
+  "name": "puppetterproject",
+  "version": "1.0.0",
+  "description": "A software Testing solution using Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gooniecares/puppeteer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gooniecares/puppeteer/issues"
+  },
+  "homepage": "https://github.com/gooniecares/puppeteer#readme",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0",
+    "puppeteer": "^22.4.1"
+  }
+}
