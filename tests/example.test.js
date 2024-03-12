@@ -24,7 +24,16 @@ describe('My first Puppeteer test', function() {
 
         await page.waitForSelector('h1')    // if it can't find this element then the test will fail.
 
-        await browser.close() //
+        //await browser.reload()  //
+        await page.evaluate(() => {
+            location.reload(true)
+        })
+
+        await setTimeout(3000);
+
+        await page.waitForSelector('h1')
+
+        await browser.close()   //
 
 
     })
