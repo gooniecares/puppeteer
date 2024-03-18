@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer')
 var assert = require('assert');
-const {setTimeout} = require("node:timers/promises");
 
 // var chai = require('chai');
 // var should = chai.should();
@@ -22,49 +21,17 @@ const {setTimeout} = require("node:timers/promises");
 // const chai = require('chai');
 // const expect = chai.expect;
 
-
+const {setTimeout} = require("node:timers/promises");
 
 describe('My first Puppeteer test', function() {
 
-    let browser
-    let page
-
-
-    before(async function() {
-
+    it('Browser should launch and go to several pages click navigate and come back?', async function() {
         const Null = "";
 
-        const configPup = {
-            headless: false,
-            slowMo: 10,
-            devtools: false
-        }
+        const browser = await puppeteer.launch({ headless: false, slowMo: 10, devtools: false })  //True runs the bowser with console dev tools closed.
 
-        browser = await puppeteer.launch(configPup)
+        const page = await browser.newPage()
 
-        //True runs the bowser with console dev tools closed.
-
-        page = await browser.newPage()
-
-        await page.setDefaultTimeout(10000)
-        await page.setDefaultNavigationTimeout(20000)
-
-    });
-
-    after(async function() {
-        console.log('Done Waiting For Response okay to Close Browser Now...');
-        await browser.close()
-    })
-
-    beforeEach(async function(){
-        // Runs after test File
-    })
-
-    afterEach(async function() {
-        // Runs after each test step
-    })
-
-    it('Browser should launch and go to several pages click navigate and come back?', async function() {
 
         await page.goto('https://devexpress.github.io/testcafe/example/')
 
@@ -172,9 +139,6 @@ describe('My first Puppeteer test', function() {
 
         await page.waitForSelector('h1')
 
-        //  await page.waitForSelector('h1', { hidden: true })      //  This works to make sure it's not in the dom.
-        //  await page.waitForSelector('h1', { hidden: true, timeout: 3000 })      //  This works to make sure it's not in the dom.
-
         console.log('Passed with h1 Found')
 
         await setTimeout(300);
@@ -192,7 +156,7 @@ describe('My first Puppeteer test', function() {
         //  await page.goto('http://zero.webappsecurity.com/index.html')
 
 
-        //console.log('Done Waiting For Response okay to Close Browser Now...');
+        console.log('Done Waiting For Response okay to Close Browser Now...');
         //await browser.close()   //
 
        
