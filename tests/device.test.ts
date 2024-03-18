@@ -23,7 +23,7 @@ interface CustomDevice {
     };
 }
 
-describe('Device Emulation', () => {
+describe('Device Emulation TypeScript', () => {
     let browser: Browser;
     let page: Page;
 

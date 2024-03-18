@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
 const {setTimeout} = require("node:timers/promises");
 
-describe('Device Emulation', () => {
+describe('Device Emulation Using CommonJs', () => {
     let browser
     let page
 

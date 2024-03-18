@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha --timeout=60000 ./tests",
+    "test:ts": "mocha --require ts-node/register --timeout=60000 --timeout=60000 ./tests/*.ts",
     "test:device": "node ./node_modules/mocha/bin/mocha --timeout=60000 ./tests/device.test.js",
     "test:devicejs": "mocha --require ts-node/register --timeout=60000 ./tests/device.test.js",
     "test:devicets": "mocha --require ts-node/register --timeout=60000 ./tests/device.test.ts"
